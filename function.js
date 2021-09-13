@@ -179,10 +179,11 @@ const simpleMultiply = (a, b) => a*b;
 // function calculate (command, a, b)
 // command: add, subtract, divide, multiply, remainder
 
+// 내가만들어본 코드
 function calculate(command, a, b){
     if (command === 'add'){
         return a+b;
-    } else if ( command === 's ubtract'){
+    } else if ( command === 'substract'){
         return a-b;
     } else if ( command === 'divide'){
         return a/b;
@@ -192,3 +193,29 @@ function calculate(command, a, b){
 
     }
 }
+
+console.log(calculate('add',1,2));
+console.log(calculate('multiply',12,2));
+
+// ellie's code
+
+function calculate1(command, a, b){
+    switch(command){
+        case 'add':
+            return a + b;
+        case 'substract':
+            return a - b;
+        case 'divide':
+            return a / b;
+        case 'multiply':
+            return a * b;
+        case 'remainder':
+            return a % b;
+        default:
+            throw Error('unonwn command');
+    }
+}
+
+console.log(calculate1('add',1,2));
+console.log(calculate1('multiply',12,2));
+

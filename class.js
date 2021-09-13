@@ -6,6 +6,7 @@
 // -introduced in ES6
 // -syntactical sugar over prototype-based inheritance
 // 문법상으로 편리함 제공
+// 
 
 // 1.Class declarartions 클래스 선언
 class Person {
@@ -122,10 +123,9 @@ triangle.draw();
 console.log(triangle.getArea());
 
 // 6.Class checking: instanceOf
-// 21:21부터
-console.log(rectangle instanceof Rectangle);
-console.log();
-console.log();
-console.log();
-console.log();
-console.log();
+// class를 이용해서 만들어진 instance
+console.log(rectangle instanceof Rectangle); // t
+console.log(triangle instanceof Rectangle); //f
+console.log(triangle instanceof Triangle); //t
+console.log(triangle instanceof Shape); //t
+console.log(triangle instanceof Object); //t js에 있는 모든 클래스들은 object를 상속한 것이다.
