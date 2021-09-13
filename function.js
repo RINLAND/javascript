@@ -1,3 +1,5 @@
+'use strict';
+
 // Function
 // -fundamental building block in the program
 // -subprogram can be used multiple times
@@ -175,4 +177,18 @@ const simpleMultiply = (a, b) => a*b;
 
 // Fun quiz time
 // function calculate (command, a, b)
-// command: add, substract, divide, multiply, remainder
+// command: add, subtract, divide, multiply, remainder
+
+function calculate(command, a, b){
+    if (command === 'add'){
+        return a+b;
+    } else if ( command === 's ubtract'){
+        return a-b;
+    } else if ( command === 'divide'){
+        return a/b;
+    } else if ( command === 'multiply'){
+        return a*b;
+    } else if ( command ==='remainder'){
+
+    }
+}
