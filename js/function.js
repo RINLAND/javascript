@@ -12,17 +12,17 @@
 // e.g. createCardAndPoint -> createCard, createPoint
 // function is object in JS
 
-function printHello(){
+function printHello() {
     console.log('Hello');
 }
 printHello();
 
-function printHome(){
+function printHome() {
     console.log('Home');
 }
 printHome();
 
-function log(message){
+function log(message) {
     console.log(message);
 }
 // 파라미터에 전달된 message를 출력한다. 
@@ -34,24 +34,26 @@ log(1234);
 // premitive parameters: passed by value
 // object parameters: passed by reference
 
-function changeName(obj){
+function changeName(obj) {
     obj.name = 'coder';
 }
 
-const ellie = { name: 'ellie'};
+const ellie = {
+    name: 'ellie'
+};
 changeName(ellie);
 console.log(ellie);
 
 // 3.Default parameters (added in ES6)
-function showMessage(message, from = 'unknown'){ //message, from 2가지파라미터
+function showMessage(message, from = 'unknown') { //message, from 2가지파라미터
     console.log(`${message} by ${from}`);
 }
 showMessage('bye');
-showMessage('Hi','ffxiv'); 
+showMessage('Hi', 'ffxiv');
 
 // 4.Rest parameters (added in ES6) 배열형태
-function printAll(...args){
-    for (let i = 0; i<args.length; i++ ){
+function printAll(...args) {
+    for (let i = 0; i < args.length; i++) {
         console.log(args[i]);
     }
 
@@ -65,14 +67,15 @@ printAll('dream', 'coding', 'ellie', 'one');
 // 5.Local scope
 // 밖에서는 안이 보이지 않고 안에서만 밖을 볼 수 있다.
 let globalMessage = 'global'; // global variable
-function printMessage(){
+function printMessage() {
     let message = 'hello';
     // message 지엽변수
     console.log(message); //local variable
     console.log(globalMessage);
-    function printAnother(){
+
+    function printAnother() {
         console.log(message);
-        let childMessage ='hello';
+        let childMessage = 'hello';
     }
     // console.log(chilidMessage) ; //error
 }
@@ -80,7 +83,7 @@ printMessage();
 
 
 // 6. Return a value
-function sum (a, b){
+function sum(a, b) {
     return a + b;
 }
 const result = sum(1, 2);
@@ -90,15 +93,15 @@ console.log(`sum: ${sum(1,2)}`);
 // 7.Early return, early exit
 
 // e.g. bad
-function upgradeUser(user){
-    if(user.point > 10){
+function upgradeUser(user) {
+    if (user.point > 10) {
         // long upgrade logic...
     }
 }
 
 // e.g. good
-function upgradeUser(user){
-    if(user.point <= 10){
+function upgradeUser(user) {
+    if (user.point <= 10) {
         return;
     }
     // long upgrade logic...
@@ -114,27 +117,27 @@ function upgradeUser(user){
 // 1.Function expression
 // a function declaration can be called earlier than it is defiend. (hoisted)
 // a function expression is created when the execution reaches it.
-const print = function(){
+const print = function () {
     console.log('print');
 }
 print();
 const printAgain = print;
 printAgain();
 const sumAgain = sum;
-console.log(sumAgain(1,3)); 
+console.log(sumAgain(1, 3));
 
 // 2.Callback function using function expression
-function randomQuiz(answer, printYes, printNo){
-    if (answer === 'love you'){
+function randomQuiz(answer, printYes, printNo) {
+    if (answer === 'love you') {
         printYes();
-    }else{
+    } else {
         printNo();
     }
 }
 
 // anonymous function
 // 이름이 없는
-const printYes = function(){
+const printYes = function () {
     console.log('yes!');
 }
 
@@ -160,7 +163,7 @@ const add = (a, b) => a + b;
 //     return a+b;
 // }
 
-const simpleMultiply = (a, b) => a*b; 
+const simpleMultiply = (a, b) => a * b;
 // const simpleMultiply = function(a, b){
 //     return a*b;
 // }
@@ -171,7 +174,7 @@ const simpleMultiply = (a, b) => a*b;
 // }
 // hello();
 
-(function hello(){
+(function hello() {
     console.log('IIFE');
 })();
 
@@ -180,27 +183,27 @@ const simpleMultiply = (a, b) => a*b;
 // command: add, subtract, divide, multiply, remainder
 
 // 내가만들어본 코드
-function calculate(command, a, b){
-    if (command === 'add'){
-        return a+b;
-    } else if ( command === 'substract'){
-        return a-b;
-    } else if ( command === 'divide'){
-        return a/b;
-    } else if ( command === 'multiply'){
-        return a*b;
-    } else if ( command ==='remainder'){
+function calculate(command, a, b) {
+    if (command === 'add') {
+        return a + b;
+    } else if (command === 'substract') {
+        return a - b;
+    } else if (command === 'divide') {
+        return a / b;
+    } else if (command === 'multiply') {
+        return a * b;
+    } else if (command === 'remainder') {
 
     }
 }
 
-console.log(calculate('add',1,2));
-console.log(calculate('multiply',12,2));
+console.log(calculate('add', 1, 2));
+console.log(calculate('multiply', 12, 2));
 
 // ellie's code
 
-function calculate1(command, a, b){
-    switch(command){
+function calculate1(command, a, b) {
+    switch (command) {
         case 'add':
             return a + b;
         case 'substract':
@@ -216,6 +219,5 @@ function calculate1(command, a, b){
     }
 }
 
-console.log(calculate1('add',1,2));
-console.log(calculate1('multiply',12,2));
-
+console.log(calculate1('add', 1, 2));
+console.log(calculate1('multiply', 12, 2));
