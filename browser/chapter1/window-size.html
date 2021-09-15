@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>size</title>
+    <style>
+        .box {
+            background-color: pink;
+        }
+    </style>
+</head>
+    
+<body>
+    <!-- script 이용해서 값 출력은 했는데 창 사이즈 줄일때마다 줄어들진 않는다 -->
+    <script>
+        document.write("<p> winndow.screen: " + screen.width + ", " + screen.height + "</p>" );
+        document.write("<p> winndow.outer: " + outerWidth + ", " + outerHeight + "</p>" );
+        document.write("<p> winndow.inner: " + innerWidth + ", " + innerHeight + "</p>" );
+        document.write("<p> documentElement.clientWidth: " + innerWidth + ", " + innerHeight + "</p>" );
+        // document의 정확한값?
+    </script>
+
+</body>
+
+</html>
