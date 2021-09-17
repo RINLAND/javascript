@@ -39,10 +39,15 @@
     </div>
     <script>
         document.addEventListener('click', clickMouse);
+        const specialBox = document.querySelector('.speicalBox'); 
 
+         // DOMRect
         function clickMouse(event) { 
             console.log("clientX: " + event.clientX + " clientY: " + event.clientY);
             console.log("pageX: " + event.pageX + " pageY: " + event.pageY);
+            var domRect = DOMRectReadOnly.fromRect(event);
+            console.log(domRect);
+
             // 궁금점 pageX와 pageY 어떻게 불러오는걸까?
         }
         clickMouse();
