@@ -17,6 +17,4 @@ document.addEventListener('mousemove', function(event){
     tag.style.left = `${x}px`;
     tag.style.top = `${y}px`;
     tag.innerHTML= `${x}px, ${y}px`;
-
-    
 });
