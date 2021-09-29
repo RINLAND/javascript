@@ -4,5 +4,8 @@ addEventListener('click', function(event){
 });
 
 $(document).mousemove(function(event){
-    $("#target").css({left:event.pageX, top:event.pageY});
+    $('#target').css({
+        left:event.pageX,
+        top:event.pageY
+    })
 });
