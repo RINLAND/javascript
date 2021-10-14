@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const section = document.querySelector('section');
+        const h2 = document.createElement('h2');
+        h2.setAttribute('class', 'title'); // <h2 class="title"></h2>
+        h2.textContent = 'this is a title'; //<h2 class="title">this is a title </h2>
+        const h3 = document.querySelector('h3'); 
+        // section.appendChild(h2);
+        section.insertAdjacentText(h2, h3); 
+    </script>
+</body>
+</html>
