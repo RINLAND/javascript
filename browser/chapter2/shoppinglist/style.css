@@ -1,0 +1,47 @@
+body{
+    background-color:white;
+    margin: 0px;
+
+}
+
+.shoppinglist{
+    position: absolute;
+    left: 45%;
+    top: 20%;
+    background-image: url('https://webgradients.com/public/webgradients_png/008%20Rainy%20Ashville.png');
+    background-size: cover;
+    width: 350px;
+    height: 500px;
+    border-radius: 15px;
+    border: 1px;
+    border-color: beige;
+}
+.header{
+    width: 350px;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    font-weight: 300;
+}
+
+.list{
+    width: 350px;
+    height: 375px;
+    background-color: whitesmoke;
+}
+
+input{
+    width: 350px;
+    height: 25px;
+    background-color: white;
+    border: 0px;
+}
+
+.plus{
+    width: 350px;
+    height: 50px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
