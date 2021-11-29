@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e3f2fd;
+    
+}
+
+.header{
+    font-size: 25px;
+    font-weight: 800;
+    background: linear-gradient(
+        60deg, #f8bbd0, #f3e5f5
+    ) ;
+}
+
+ul{
+
+}
+
+li{
+
+}
+
+footer{
+
+}

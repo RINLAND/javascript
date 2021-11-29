@@ -6,7 +6,7 @@ const addBtn = document.querySelector('.footer__button');
 
 
 function onAdd() {
-    // 1. 사용한 입력한 텍스트를 받아오기
+    // 1. 사용자가 입력한 텍스트를 받아오기
     const text = input.value; // input 에 입력한 값 가져오기
     // console.log(text); 
     if (text ===''){
@@ -17,7 +17,9 @@ function onAdd() {
     const item = createItem(text);
     // 3.items 컨테이너 안에 새로 만든 아이템 추가한다.
     items.appendChild(item);
-    // 4. input을 초기화 한다.
+    // 4.새로 추가된 아이템으로 스크롤링
+    item.scrollIntoView({block : 'center'});
+    // 5. input을 초기화 한다.
     input.value = '';
     input.focus();
 }
@@ -56,5 +58,8 @@ addBtn.addEventListener('click', function(){
 })
 
 input.addEventListener('keypress', function(event){
-    onAdd();
+
+    if (event.key === 'Enter'){
+        onAdd();
+    }
 })
