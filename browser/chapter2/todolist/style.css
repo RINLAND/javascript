@@ -4,16 +4,27 @@
 
 body{
     background-color: #e3f2fd;
+    text-align: center;
     
 }
+
+.list{
+    width: 400px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
 
 .header{
     font-size: 25px;
     font-weight: 800;
     background: linear-gradient(
-        60deg, #f8bbd0, #f3e5f5
+        120deg, #d4fc79 10%, #84fab0 100%
     ) ;
+    border-radius: 20px 20px 0px 0px;
 }
+
 
 ul{
 
