@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 250px;
+        height: 250px;
+        background-color: yellow;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="checkbox" />
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+      document.addEventListener('wheel', event => {
+        console.log('scrolling');
+        event.preventDefault();
+      }
+      // ,{passive : false} passive true값인 것은 그대로인게 좋다
+      );
+      const checkbox = document.querySelector('input');
+      checkbox.addEventListener('click', event => {
+        // long
+        console.log('checked');
+        event.preventDefault();
+        // 브라우저에서 기본적으로 발생하는 동작을 취소 , 체크 모양이 안보인다 브라우저 행동 무시 
+      });
+    </script>
+  </body>
+</html>

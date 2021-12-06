@@ -38,7 +38,6 @@ function createItem(text){
 
     todo.appendChild(todoName);
     todo.appendChild(delBtn);
-
     todoRow.appendChild(todo);
     todoRow.appendChild(divider);
 
