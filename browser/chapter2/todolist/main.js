@@ -22,6 +22,10 @@ function createItem(text){
     const todo = document.createElement('div');
     todo.setAttribute('class', 'todo');
 
+    const todoDone = document.createElement('button');
+    todoDone.setAttribute('class', 'todo__done');
+    todoDone.innerHTML = '<i class="fas fa-check"></i>';
+
     const todoName = document.createElement('span');
     todoName.setAttribute('class', 'todo__name');
     todoName.innerText = text;
@@ -36,6 +40,7 @@ function createItem(text){
     const divider = document.createElement('div');
     divider.setAttribute = ('class', 'todo__divider');
 
+    todo.appendChild(todoDone);
     todo.appendChild(todoName);
     todo.appendChild(delBtn);
     todoRow.appendChild(todo);
