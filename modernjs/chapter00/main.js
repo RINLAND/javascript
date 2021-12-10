@@ -55,3 +55,7 @@ console.log(fruit__basket[0]);
 //apple
 console.log(fruit__basket[2]);
 // orange
+
+
+
+
