@@ -45,6 +45,7 @@ function createItem(text){
     const itemDivider = document.createElement('div');
     itemDivider.setAttribute('class', 'item__divider');
 
+
     item.appendChild(name);
     item.appendChild(deleteBtn);
 
